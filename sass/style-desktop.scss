@@ -1,0 +1,228 @@
+/*----------
+    Navbar
+-----------*/
+header
+{
+    .nav
+    {
+        width: 60%;
+    }
+}
+
+/*----------
+    Hero
+-----------*/
+.home
+{
+    &--feature
+    {
+        &::before
+        {
+            left: calc(-9rem + 3px);
+            width: 18rem;
+        }
+    }
+    &__image
+    {
+        width: 100%;
+    }
+    &__text
+    {
+        padding: 0 9rem;
+        &--features
+        {
+            &::before
+            {
+                left: calc(-5rem + 3px);
+                width: 10rem;
+            }
+        }
+    }
+    &-2
+    {
+        .home__text
+        {
+            padding: 0 9rem;
+        }
+    }
+    
+}
+
+/*----------
+   Stories
+-----------*/
+.stories
+{
+    grid-template-columns: repeat(4, 25%);
+    &__card
+    {
+        padding: 0 2.5rem 2.5rem;
+    }
+    &-1
+    {
+        background: url('../assets/stories/desktop/mountains.jpg') no-repeat center/cover;
+    }
+    &-2
+    {
+        background: url('../assets/stories/desktop/cityscapes.jpg') no-repeat center/cover;
+    }
+    &-3
+    {
+        background: url('../assets/stories/desktop/18-days-voyage.jpg') no-repeat center/cover;
+    }
+    &-4
+    {
+        background: url('../assets/stories/desktop/architecturals.jpg') no-repeat center/cover;
+    }
+    &-5
+    {
+        background: url('../assets/stories/desktop/world-tour.jpg') no-repeat center/cover;
+    }
+    &-6
+    {
+        background: url('../assets/stories/desktop/unforeseen-corners.jpg') no-repeat center/cover;
+    }
+    &-7
+    {
+        background: url('../assets/stories/desktop/king-on-africa.jpg') no-repeat center/cover;
+    }
+    &-8
+    {
+        background: url('../assets/stories/desktop/trip-to-nowhere.jpg') no-repeat center/cover;
+    }
+    &-9
+    {
+        background: url('../assets/stories/desktop/rage-of-the-sea.jpg') no-repeat center/cover;
+    }
+    &-10
+    {
+        background: url('../assets/stories/desktop/running-free.jpg') no-repeat center/cover;
+    }
+    &-11
+    {
+        background: url('../assets/stories/desktop/behind-the-waves.jpg') no-repeat center/cover;
+    }
+    &-12
+    {
+        background: url('../assets/stories/desktop/calm-waters.jpg') no-repeat center/cover;
+    }
+    &-13
+    {
+        background: url('../assets/stories/desktop/milky-way.jpg') no-repeat center/cover;
+    }
+    &-14
+    {
+        background: url('../assets/stories/desktop/dark-forest.jpg') no-repeat center/cover;
+    }
+    &-15
+    {
+        background: url('../assets/stories/desktop/somwarpet.jpg') no-repeat center/cover;
+    }
+    &-16
+    {
+        background: url('../assets/stories/desktop/land-of-dreams.jpg') no-repeat center/cover;
+    }
+}
+
+/*----------
+  Features
+-----------*/
+.features
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    &__card + &__card
+    {
+        margin-top: 0;
+    }
+}
+
+
+
+/*----------
+    Pricing
+-----------*/
+.pricing
+{
+    &__table
+    {
+        width: 80vw;
+        text-align: center;
+        flex-direction: row;
+
+        &-1, &-2, &-3
+        {
+            position: static;
+        }
+        &-1 > *, &-2 > *, &-3 > *
+        {
+            width: 100%;
+        }
+        &--active
+        {
+            position: relative;
+            padding: 5rem 2rem 5rem;
+        }
+        &--active::before
+        {
+            position: absolute;
+            transform: rotate(0deg);
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+    
+    &__prices
+    {
+        text-align: center;
+        position: static;
+    }
+}
+
+
+/*----------
+    Compare
+-----------*/
+.compare
+{
+    width: 60vw;
+}
+
+
+/*----------
+    Footer
+-----------*/
+.footer
+{
+    grid-template-columns: repeat(3, 1fr);
+    &__social
+    {
+        grid-column: 1 / span 1;
+    }
+    &__menu
+    {
+        grid-column: 2 / span 1;
+        position: static;
+        margin: 0;
+        ul
+        {
+            flex-direction: column;
+            text-align: left;
+        }
+        li + li
+        {
+            margin-top: 1.5rem;
+            margin-left: 0;
+        }
+    }
+    &__cta
+    {
+        grid-column: 3 / span 1;
+        .copyright
+        {
+            margin-top: 0;
+        }
+    }
+}

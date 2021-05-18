@@ -1,0 +1,215 @@
+/*----------
+    Navbar
+-----------*/
+header .nav {
+  width: 60%;
+}
+
+/*----------
+    Hero
+-----------*/
+.home--feature::before {
+  left: calc(-9rem + 3px);
+  width: 18rem;
+}
+
+.home__image {
+  width: 100%;
+}
+
+.home__text {
+  padding: 0 9rem;
+}
+
+.home__text--features::before {
+  left: calc(-5rem + 3px);
+  width: 10rem;
+}
+
+.home-2 .home__text {
+  padding: 0 9rem;
+}
+
+/*----------
+   Stories
+-----------*/
+.stories {
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+}
+
+.stories__card {
+  padding: 0 2.5rem 2.5rem;
+}
+
+.stories-1 {
+  background: url("../assets/stories/desktop/mountains.jpg") no-repeat center/cover;
+}
+
+.stories-2 {
+  background: url("../assets/stories/desktop/cityscapes.jpg") no-repeat center/cover;
+}
+
+.stories-3 {
+  background: url("../assets/stories/desktop/18-days-voyage.jpg") no-repeat center/cover;
+}
+
+.stories-4 {
+  background: url("../assets/stories/desktop/architecturals.jpg") no-repeat center/cover;
+}
+
+.stories-5 {
+  background: url("../assets/stories/desktop/world-tour.jpg") no-repeat center/cover;
+}
+
+.stories-6 {
+  background: url("../assets/stories/desktop/unforeseen-corners.jpg") no-repeat center/cover;
+}
+
+.stories-7 {
+  background: url("../assets/stories/desktop/king-on-africa.jpg") no-repeat center/cover;
+}
+
+.stories-8 {
+  background: url("../assets/stories/desktop/trip-to-nowhere.jpg") no-repeat center/cover;
+}
+
+.stories-9 {
+  background: url("../assets/stories/desktop/rage-of-the-sea.jpg") no-repeat center/cover;
+}
+
+.stories-10 {
+  background: url("../assets/stories/desktop/running-free.jpg") no-repeat center/cover;
+}
+
+.stories-11 {
+  background: url("../assets/stories/desktop/behind-the-waves.jpg") no-repeat center/cover;
+}
+
+.stories-12 {
+  background: url("../assets/stories/desktop/calm-waters.jpg") no-repeat center/cover;
+}
+
+.stories-13 {
+  background: url("../assets/stories/desktop/milky-way.jpg") no-repeat center/cover;
+}
+
+.stories-14 {
+  background: url("../assets/stories/desktop/dark-forest.jpg") no-repeat center/cover;
+}
+
+.stories-15 {
+  background: url("../assets/stories/desktop/somwarpet.jpg") no-repeat center/cover;
+}
+
+.stories-16 {
+  background: url("../assets/stories/desktop/land-of-dreams.jpg") no-repeat center/cover;
+}
+
+/*----------
+  Features
+-----------*/
+.features {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+}
+
+.features__card + .features__card {
+  margin-top: 0;
+}
+
+/*----------
+    Pricing
+-----------*/
+.pricing__table {
+  width: 80vw;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pricing__table-1, .pricing__table-2, .pricing__table-3 {
+  position: static;
+}
+
+.pricing__table-1 > *, .pricing__table-2 > *, .pricing__table-3 > * {
+  width: 100%;
+}
+
+.pricing__table--active {
+  position: relative;
+  padding: 5rem 2rem 5rem;
+}
+
+.pricing__table--active::before {
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.pricing__prices {
+  text-align: center;
+  position: static;
+}
+
+/*----------
+    Compare
+-----------*/
+.compare {
+  width: 60vw;
+}
+
+/*----------
+    Footer
+-----------*/
+.footer {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__social {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / span 1;
+}
+
+.footer__menu {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
+  position: static;
+  margin: 0;
+}
+
+.footer__menu ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.footer__menu li + li {
+  margin-top: 1.5rem;
+  margin-left: 0;
+}
+
+.footer__cta {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / span 1;
+}
+
+.footer__cta .copyright {
+  margin-top: 0;
+}
+/*# sourceMappingURL=style-desktop.css.map */

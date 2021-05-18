@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="sass/style.css">
+  <link rel="stylesheet" href="sass/style-tablet.css" media="screen and (min-width: 48em)">
+  <link rel="stylesheet" href="sass/style-desktop.css" media="screen and (min-width: 60em)">
+  <title>Photosnap Website Challenge</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <svg class="logo" width="170" height="16">
+          <image href="assets/shared/desktop/logo.svg"/>
+          <use href="assets/shared/desktop/logo.svg#logo"></use>
+        </svg>
+      </a>
+      <a href="#" class="toggle"><img class="ham" src="assets/shared/mobile/menu.svg" alt="toggle menu"></a>
+    </div>
+    <nav class="nav nav--hidden">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav--active" href="stories.html">Stories</a></li>
+        <li class="nav__item"><a class="nav--active" href="features.html">Features</a></li>
+        <li class="nav__item"><a class="nav--active" href="pricing.html">Pricing</a></li>
+      </ul>
+      <div class="divider"></div>
+      <a href="#" class="nav__item inviteBtn-1 darkBtn">Get an invite</a>
+    </nav>
+  </header>
+
+  <!-- Pricing Hero -->
+  <section class="home--hero home home--changeOrder">
+    <div class="home__image">
+      <picture>
+        <source srcset="assets/pricing/desktop/hero.jpg" media="(min-width: 60em)"/>
+        <source srcset="assets/pricing/tablet/hero.jpg" media="(min-width: 48em)"/>
+        <img srcset="assets/pricing/mobile/hero.jpg" alt="pricing hero"/>
+      </picture>
+    </div>
+    <div class="home__text home__text--features home--feature">
+      <h1>Pricing</h1>
+      <p>Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
+        It’s the simple way to create and share your photos.</p>
+    </div>
+  </section>
+  
+  <!-- Pricing -->
+  <section class="pricing">
+    <div class="pricing__switch">
+      <p>Monthly</p>
+      <div class="pricing__switch--toggle"></div>
+      <p>Yearly</p>
+    </div>
+
+    <div class="pricing__table">
+      <div class="pricing__table-1">
+        <h2 class="pricing__heading">Basic</h2>
+        <p class="pricing__details">Includes basic usage of our platform. Recommended for new and aspiring photographers.</p>
+        <div class="pricing__prices">
+          <p>$19.00</p>
+          <p> per month</p>
+        </div>
+        <a href="#" class="inviteBtn-1 darkBtn">Pick Plan</a>
+      </div>
+
+      <div class="pricing__table-2 pricing__table--active">
+        <h2 class="pricing__heading">Pro</h2>
+        <p class="pricing__details">More advanced features available. Recommended for photography veterans and professionals.</p>
+        <div class="pricing__prices">
+          <p>$39.00</p>
+          <p> per month</p>
+        </div>
+        <a href="#" class="inviteBtn-1 lightBtn">Pick Plan</a>
+      </div>
+
+      <div class="pricing__table-3">
+        <h2 class="pricing__heading">Business</h2>
+        <p class="pricing__details">Additional features available such as more detailed metrics. Recommended for business owners.</p>
+        <div class="pricing__prices">
+          <p>$99.00</p>
+          <p> per month</p>
+        </div>
+        <a href="#" class="inviteBtn-1 darkBtn">Pick Plan</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Compare -->
+  <section class="compare">
+    <h1 class="compare__heading">Compare</h1>
+
+    <h4 class="compare__features">The Features</h4>
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">The Features</th>
+          <th scope="col">Basic</th>
+          <th scope="col">Pro</th>
+          <th scope="col">Business</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Unlimited Story Posting</td>
+          <td data-label="Basic"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+          <td data-label="Pro"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+          <td data-label="Business"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+        </tr>
+        <tr>
+          <td>Unlimited Photo Upload</td>
+          <td data-label="Basic"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+          <td data-label="Pro"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+          <td data-label="Business"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+        </tr>
+        <tr>
+          <td>Embedding Custom Content</td>
+          <td data-label="Basic"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Pro"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+          <td data-label="Business"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+        </tr>
+        <tr>
+          <td>Customize Metadata</td>
+          <td data-label="Basic"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Pro"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+          <td data-label="Business"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+        </tr>
+        <tr>
+          <td>Advanced Metrics</td>
+          <td data-label="Basic"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Pro"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Business"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+        </tr>
+        <tr>
+          <td>Photo Downloads</td>
+          <td data-label="Basic"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Pro"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Business"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+        </tr>
+        <tr>
+          <td>Search Engine Indexing</td>
+          <td data-label="Basic"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Pro"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Business"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+        </tr>
+        <tr>
+          <td>Custom Analytics</td>
+          <td data-label="Basic"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Pro"><img class="check-hidden" src="#" alt="check"></td>
+          <td data-label="Business"><img src="assets/pricing/desktop/check.svg" alt="check"></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </section>
+  
+
+  <!-- CTA -->
+  <section class="home--hero home">
+    <div class="home__image home__image--cta">
+      <picture>
+        <source srcset="assets/shared/desktop/bg-beta.jpg" media="(min-width: 60em)"/>
+        <source srcset="assets/shared/tablet/bg-beta.jpg" media="(min-width: 48em)"/>
+        <img srcset="assets/shared/mobile/bg-beta.jpg" alt="background"/>
+      </picture>
+    </div>
+    <div class="home__text home--feature home__text--cta">
+      <div><h1>We're in Beta.</h1>
+      <h1>Get your invite today!</h1></div>
+      <a href="#" class="inviteBtn-2 darkBtn">Get an invite <span></span></a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__social">
+      <svg class="logo" width="170" height="16">
+        <image href="assets/shared/desktop/logo.svg"/>
+        <use id="photo-white" href="assets/shared/desktop/logo.svg#logo"></use>
+      </svg>
+      <div class="footer__socialIcon">
+        <svg class="facebook" width="20" height="20">
+          <use id="facebook" href="assets/shared/desktop/facebook.svg#facebook"></use>
+        </svg>
+        <svg class="youtube" width="21" height="20">
+          <use id="youtube" href="assets/shared/desktop/youtube.svg#youtube"></use>
+        </svg>
+        <svg class="twitter" width="21" height="18">
+          <use id="twitter" href="assets/shared/desktop/twitter.svg#twitter"></use>
+        </svg>
+        <svg class="pinterest" width="20" height="20">
+          <use id="pinterest" href="assets/shared/desktop/pinterest.svg#pinterest"></use>
+        </svg>
+        <svg class="instagram" width="21" height="20">
+          <use id="instagram" href="assets/shared/desktop/instagram.svg#instagram"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="footer__menu">
+      <ul>
+        <li class="footer__menuItem"><a class="footer--active" href="index.html">Home</a></li>
+        <li class="footer__menuItem"><a class="footer--active" href="stories.html">Stories</a></li>
+        <li class="footer__menuItem"><a class="footer--active" href="features.html">Features</a></li>
+        <li class="footer__menuItem"><a class="footer--active" href="pricing.html">Pricing</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__cta">
+      <a href="#" class="inviteBtn-2 darkBtn">Get an invite <span></span></a>
+      <p class="copyright">Copyright 2019. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

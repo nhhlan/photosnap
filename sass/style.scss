@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/*--VARIABLES--*/
+// Color
+$brand-main-accent: linear-gradient(45deg, #FFC593 0%, #BC7198 40%, #5A77FF 100%);
+$black: #000000;
+$white: #FFFFFF;
+$grey: #DFDFDF;
+// Fonts
+$size-h1: 2.5rem; // 40px
+$size-h1-mobile: 2rem; // 32px
+$size-h2: 1.5rem; //24px
+$size-h3: 1.125rem; //18px
+$size-h4: 0.75rem; //12px
+$size-main: 0.9375rem; //15px
+$font-family: 'DM Sans', sans-serif;
+$weight-normal: 400;
+$weight-bold: 700;
+
+/*--RESET--*/
+/* Box sizing rules */
+*, *::before, *::after
+{
+    box-sizing: border-box;
+}
+/* Remove default margin & padding */
+html, body, h1, h2, h3, h4, h5, p, ul, li
+{
+    margin: 0;
+    padding: 0;
+}
+/* Set core root defaults */
+html:focus-within 
+{
+	scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body 
+{
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    // line-height: 1.5;
+    font-family: $font-family;
+    font-size: $size-main;
+    color: $black;
+}
+/* Remove default list style */
+li 
+{
+    list-style: none;
+}
+a 
+{
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+}
+/* Make images easier to work with */
+picture, img
+{
+    max-width: 100%;
+    display: block;
+}
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select 
+{
+  font: inherit;
+}
+
+/*--VISUALLY HIDDEN--*/
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+/*--UTILITIES--*/
+.container
+{
+    width: 85vw;
+}
+.divider
+{
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color: $black, $alpha: 0.5);
+    margin-top: 1rem;
+}
+.darkBtn
+{
+    color: $white;
+    background-color: $black;
+}
+.lightBtn
+{
+    color: $black;
+    background-color: $white;
+}
+.inviteBtn
+{
+    &-1
+    {
+        padding: 1em 2em;
+        &:hover
+        {
+            color: $black;
+            background-color: $grey;
+        }
+    }
+    &-2
+    {
+        background: transparent;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        font-size: $size-h4;
+        &:hover
+        {
+            text-decoration: underline;
+        }
+        span
+        {
+            position: absolute;
+            top: 0.4rem;
+            right: -4rem;
+            width: 3rem;
+            height: 1.5px;
+            background: $white;
+            &::before
+            {
+                content: '';
+                position: absolute;
+                top: -3px;
+                right: -2.5px;
+                width: 0.6rem;
+                height: 1.5px;
+                background: $white;
+                transform: rotate(45deg);
+            }
+            &::after
+            {
+                content: '';
+                position: absolute;
+                top: 3px;
+                right: -2.5px;
+                width: 0.6rem;
+                height: 1.5px;
+                background: $white;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    &--storiesCard
+    {
+        display: flex;
+        span
+        {
+            right: 0;
+        }
+    }
+}
+// SVG logo & icon
+// Only work on Firefox T_T
+use#photo-white, 
+use#facebook, 
+use#youtube, 
+use#twitter, 
+use#pinterest, 
+use#instagram
+{
+    --primary-color: #FFF;
+}
+use#facebook:hover, 
+use#youtube:hover, 
+use#twitter:hover, 
+use#pinterest:hover, 
+use#instagram:hover
+{
+    --primary-color: url(#a);
+}
+
+
+/*--LAYOUT--*/
+header, section, footer
+{
+    width: 100vw;
+    max-width: 100%;
+}
+header > *, section > *, footer > *
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/*--COMPONENT--*/
+/*----------
+    Navbar
+-----------*/
+header
+{
+    position: relative;
+    z-index: 1;
+
+    .container
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 1.5rem 0;
+        background-color: $white;
+    }
+
+    .nav
+    {
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        background-color: $white;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+
+        &--hidden
+        {
+            display: none;
+        }
+
+        &::before
+        {
+            content: '';
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba($color: $black, $alpha: 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        &__item:not(.nav__list .nav__item:first-child)
+        {
+            margin-top: 1rem;
+        }
+
+        &__item
+        {
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        &--active:hover
+        {
+            color: $grey;
+        }
+    }
+}
+
+
+/*----------
+    Hero
+-----------*/
+.home
+{
+    &--hero
+    {
+        background: $black;
+        color: $white;
+        position: relative;
+    }
+    &--feature
+    {
+        position: relative;
+        &::before
+        {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8rem;
+            height: 6px;
+            background: $brand-main-accent;
+        }
+    }
+    &__image
+    {
+        img
+        {
+            width: 100%;
+        }
+    }
+    &__text
+    {
+        @extend .container;
+        text-align: left;
+        padding: 4rem 0;
+        h1
+        {
+            font-size: $size-h1-mobile;
+            font-weight: $weight-bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        p
+        {
+            margin: 1.5rem 0;
+            opacity: 0.7;
+            line-height: 1.5;
+        }  
+        h4
+        {
+            font-size: $size-h4;
+            text-transform: uppercase;
+            font-weight: $weight-bold;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }  
+        &--cta
+        {
+            position: absolute;
+            top: 0;
+            left: 7.5vw;
+            h1:nth-of-type(2)
+            {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    
+
+    &-2, &-3
+    {
+        a
+        {
+            span
+            {
+                background: $black;
+                &::before
+                {
+                    background: $black;
+                }
+                &::after
+                {
+                    background: $black;
+                }
+            }
+        }
+    }
+
+}
+
+
+/*----------
+   Stories
+-----------*/
+.stories
+{
+    &__card
+    {
+        height: 100vw;
+        display: flex;
+        padding-bottom: 7.5vw;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        &:hover
+        {
+            transform: translateY(-8%);
+            transition: transform 300ms ease-in;
+            &::after
+            {
+                transform: scale(1);
+                transform-origin: left;
+                transition: transform 400ms ease-in;
+            }
+        }
+        &::before
+        {
+            content: '';
+            width: 100%;
+            height: inherit;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(0deg, $black 0%, transparent 100%);
+            opacity: 0.7;
+        }
+        &::after
+        {
+            content: '';
+            width: 100%;
+            height: 6px;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            background: $brand-main-accent;
+            transform: scale(0);
+        }
+        
+    }
+    &__text
+    {
+        @extend .container;
+        color: $white;
+        text-align: left;
+        margin: 0 auto;
+        align-self: flex-end;
+        position: relative;
+        z-index: 1;
+        h3
+        {
+            font-size: $size-h3;
+            margin: 0.15rem 0;
+        }
+    }
+    &__date, &__author
+    {
+        font-size: 0.8125rem;
+        opacity: 1.0;
+    }
+    .cardDivider
+    {
+        background-color: rgba($color: $white, $alpha: 0.5);
+        margin-bottom: 1rem;
+    }
+    &-1
+    {
+        background: url('../assets/stories/mobile/mountains.jpg') no-repeat center/cover;
+    }
+    &-2
+    {
+        background: url('../assets/stories/mobile/cityscapes.jpg') no-repeat center/cover;
+    }
+    &-3
+    {
+        background: url('../assets/stories/mobile/18-days-voyage.jpg') no-repeat center/cover;
+    }
+    &-4
+    {
+        background: url('../assets/stories/mobile/architecturals.jpg') no-repeat center/cover;
+    }
+    &-5
+    {
+        background: url('../assets/stories/mobile/world-tour.jpg') no-repeat center/cover;
+    }
+    &-6
+    {
+        background: url('../assets/stories/mobile/unforeseen-corners.jpg') no-repeat center/cover;
+    }
+    &-7
+    {
+        background: url('../assets/stories/mobile/king-on-africa.jpg') no-repeat center/cover;
+    }
+    &-8
+    {
+        background: url('../assets/stories/mobile/trip-to-nowhere.jpg') no-repeat center/cover;
+    }
+    &-9
+    {
+        background: url('../assets/stories/mobile/rage-of-the-sea.jpg') no-repeat center/cover;
+    }
+    &-10
+    {
+        background: url('../assets/stories/mobile/running-free.jpg') no-repeat center/cover;
+    }
+    &-11
+    {
+        background: url('../assets/stories/mobile/behind-the-waves.jpg') no-repeat center/cover;
+    }
+    &-12
+    {
+        background: url('../assets/stories/mobile/calm-waters.jpg') no-repeat center/cover;
+    }
+    &-13
+    {
+        background: url('../assets/stories/mobile/milky-way.jpg') no-repeat center/cover;
+    }
+    &-14
+    {
+        background: url('../assets/stories/mobile/dark-forest.jpg') no-repeat center/cover;
+    }
+    &-15
+    {
+        background: url('../assets/stories/mobile/somwarpet.jpg') no-repeat center/cover;
+    }
+    &-16
+    {
+        background: url('../assets/stories/mobile/land-of-dreams.jpg') no-repeat center/cover;
+    }
+}
+
+
+/*----------
+  Features
+-----------*/
+.features
+{
+    @extend .container;
+    margin: 0 auto;
+    padding: 5rem 0;
+    &__card + &__card
+    {
+        margin-top: 3rem;
+    }
+    &__card
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h3
+        {
+            font-size: $size-h3;
+            margin: 3rem 0 1rem;
+        }
+    }
+}
+
+/*----------
+    Pricing
+-----------*/
+// Toggle Switch
+.pricing
+{
+    &__switch
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin: 2rem 0;
+        p
+        {
+            font-size: $size-h3;
+            font-weight: $weight-bold;
+            &:nth-of-type(2)
+            {
+                opacity: 0.5;
+            }
+        }
+        &--toggle
+        {
+            display: inline-block;
+            width: 4rem;
+            height: 2rem;
+            background-color: $grey;
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+        }
+        &--toggle::before
+        {
+            content: '';
+            position: absolute;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: $black;
+            top: 4px;
+            left: 4px; //transition 36px
+            transition: left 0.3s ease;
+        }
+        &--toggle.active::before
+        {
+            left: 36px;
+        }
+    }
+
+    &__table
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        &-1, &-2, &-3
+        {
+            @extend .container;
+            background-color: rgba($color: $grey, $alpha: 0.5);
+            padding: 2.5rem 2rem 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        a
+        {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: $weight-bold;
+        }
+        &--active
+        {
+            background-color: rgba($color: $black, $alpha: 1.0);
+            color: rgba($color: $white, $alpha: 1.0);
+            position: relative;
+        }
+        &--active::before
+        {
+            content: '';
+            position: absolute;
+            width: 85vw;
+            height: 6px;
+            background: $brand-main-accent;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__heading
+    {
+        font-size: $size-h2;
+        font-weight: $weight-bold;
+    }
+    &__details
+    {
+        font-size: $size-main;
+        opacity: 0.6;
+    }
+    &__prices
+    {
+        p:nth-of-type(1)
+        {
+            font-size: $size-h1;
+            font-weight: $weight-bold;
+        }
+        p:nth-of-type(2)
+        {
+            font-size: $size-main;
+            opacity: 0.6;
+        }
+    }
+}
+
+
+/*----------
+    Compare
+-----------*/
+.compare
+{
+    @extend .container;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 4rem;
+    &__heading
+    {
+        display: none;
+        font-size: $size-h1;
+        font-weight: $weight-bold;
+        text-align: center;
+        margin: 6rem 0 2rem;
+        text-transform: uppercase;
+    }
+    &__features
+    {
+        font-size: $size-h4;
+        font-weight: $weight-bold;
+        text-transform: uppercase;
+        padding: 1rem;
+        width: 100%;
+        position: absolute;
+        top: -3rem;
+        left: 0;
+        text-align: left;
+    }
+    &__features::after
+    {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $black;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+    }
+    .check-hidden
+    {
+        visibility: hidden;
+    }
+    table 
+    {
+        // Table styling
+        border-collapse: collapse;
+        margin: 5rem 0 0;
+        padding: 0;
+        width: 100%;
+        table-layout: fixed;
+        thead
+        {
+            tr 
+            {
+                border-bottom: 1px solid $black;
+            }
+        }
+        tr 
+        {
+            border-bottom: 1px solid $grey;
+        }
+        th, td:first-child
+        {
+            padding: 1rem;
+            font-size: $size-h4;
+            font-weight: $weight-bold;
+            text-transform: uppercase;
+        }
+        th:first-child, td:first-child
+        {
+            text-align: left;
+        }
+        td > img
+        {
+            margin: 0.5rem auto 0;
+        }
+        // Mobile display
+        thead
+        {
+            visibility: collapse;
+        }
+        tr
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+        td:first-child
+        {
+            width: 100%;
+            letter-spacing: 1px;
+        }
+        td:not(:first-child)
+        {
+            width: 3.75rem;
+            height: 3.75rem;
+            padding-bottom: 1rem;
+        }
+        td:not(:first-child)::before
+        {
+            content: attr(data-label);
+            text-transform: uppercase;
+            font-size: 0.625rem;
+            opacity: 0.5;
+            letter-spacing: 1px;
+        }
+        
+    }
+ 
+}
+
+
+/*----------
+    Footer
+-----------*/
+.footer
+{
+    background: $black;
+    color: $white;
+    padding: 4rem 0;
+    &__socialIcon
+    {
+        margin: 1rem 0 2rem;
+        svg + svg
+        {
+            margin-left: 0.8rem
+        }
+    }
+    
+    &__menu
+    {
+        margin-bottom: 5rem;
+        li + li
+        {
+            margin-top: 0.75rem;
+        }
+        a
+        {
+            color: $white;
+            text-transform: uppercase;
+            font-size: $size-h4;
+            letter-spacing: 2px;
+        }
+        
+    }
+
+    &__cta
+    {
+        .copyright
+        {
+            color: $white;
+            opacity: 0.7;
+            margin-top: 3rem;
+        }
+    }
+
+    &--active:hover
+    {
+        opacity: 0.5;
+    }
+
+}
+
+

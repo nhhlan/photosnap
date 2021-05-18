@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="sass/style.css">
+  <link rel="stylesheet" href="sass/style-tablet.css" media="screen and (min-width: 48em)">
+  <link rel="stylesheet" href="sass/style-desktop.css" media="screen and (min-width: 60em)">
+  <title>Photosnap Website Challenge</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <svg class="logo" width="170" height="16">
+          <image href="assets/shared/desktop/logo.svg"/>
+          <use href="assets/shared/desktop/logo.svg#logo"></use>
+        </svg>
+      </a>
+      <a href="#" class="toggle"><img class="ham" src="assets/shared/mobile/menu.svg" alt="toggle menu"></a>
+    </div>
+    <nav class="nav nav--hidden">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav--active" href="stories.html">Stories</a></li>
+        <li class="nav__item"><a class="nav--active" href="features.html">Features</a></li>
+        <li class="nav__item"><a class="nav--active" href="pricing.html">Pricing</a></li>
+      </ul>
+      <div class="divider"></div>
+      <a href="#" class="nav__item inviteBtn-1 darkBtn">Get an invite</a>
+    </nav>
+  </header>
+
+  <!-- Features Hero -->
+  <section class="home--hero home home--changeOrder">
+    <div class="home__image">
+      <picture>
+        <source srcset="assets/features/desktop/hero.jpg" media="(min-width: 60em)"/>
+        <source srcset="assets/features/tablet/hero.jpg" media="(min-width: 48em)"/>
+        <img srcset="assets/features/mobile/hero.jpg" alt="features hero"/>
+      </picture>
+    </div>
+    <div class="home__text home__text--features home--feature">
+      <h1>Features</h1>
+      <p>We make sure all of our features are designed to be loved by every aspiring and even 
+        professional photograpers who wanted to share their stories.</p>
+    </div>
+  </section>
+  
+  <!-- Features -->
+  <section class="features features__2column">
+    <div class="features__card features-1">
+      <img src="assets/features/desktop/responsive.svg" alt="responsive">
+      <h3>100% Responsive</h3>
+      <p>No matter which the device you’re on, our site is fully responsive and stories 
+        look beautiful on any screen.</p>
+    </div>
+
+    <div class="features__card features-2">
+      <img src="assets/features/desktop/no-limit.svg" alt="no limit">
+      <h3>No Photo Upload Limit</h3>
+      <p>Our tool has no limits on uploads or bandwidth. Freely upload in bulk and 
+        share all of your stories in one go.</p>
+    </div>
+
+    <div class="features__card features-3">
+      <img src="assets/features/desktop/embed.svg" alt="embed">
+      <h3>Available to Embed</h3>
+      <p>Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, 
+        Google Maps, and more.</p>
+    </div>
+
+    <div class="features__card features-4">
+      <img src="assets/features/desktop/custom-domain.svg" alt="custom domain">
+      <h3>Custom Domain</h3>
+      <p>With Photosnap subscriptions you can host your stories on your own domain. You can 
+        also remove our branding!</p>
+    </div>
+
+    <div class="features__card features-5">
+      <img src="assets/features/desktop/boost-exposure.svg" alt="boost exposure">
+      <h3>Boost Your Exposure</h3>
+      <p>Users that viewed your story or gallery can easily get notifed of new and featured 
+        stories with our built in mailing list.</p>
+    </div>
+
+    <div class="features__card features-6">
+      <img src="assets/features/desktop/drag-drop.svg" alt="drag drop">
+      <h3>Drag & Drop Image</h3>
+      <p>Easily drag and drop your image and get beautiful shots everytime. No over the top 
+        tooling to add friction to creating stories.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="home--hero home">
+    <div class="home__image home__image--cta">
+      <picture>
+        <source srcset="assets/shared/desktop/bg-beta.jpg" media="(min-width: 60em)"/>
+        <source srcset="assets/shared/tablet/bg-beta.jpg" media="(min-width: 48em)"/>
+        <img srcset="assets/shared/mobile/bg-beta.jpg" alt="background"/>
+      </picture>
+    </div>
+    <div class="home__text home--feature home__text--cta">
+      <div><h1>We're in Beta.</h1>
+      <h1>Get your invite today!</h1></div>
+      <a href="#" class="inviteBtn-2 darkBtn">Get an invite <span></span></a>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__social">
+      <svg class="logo" width="170" height="16">
+        <image href="assets/shared/desktop/logo.svg"/>
+        <use id="photo-white" href="assets/shared/desktop/logo.svg#logo"></use>
+      </svg>
+      <div class="footer__socialIcon">
+        <svg class="facebook" width="20" height="20">
+          <use id="facebook" href="assets/shared/desktop/facebook.svg#facebook"></use>
+        </svg>
+        <svg class="youtube" width="21" height="20">
+          <use id="youtube" href="assets/shared/desktop/youtube.svg#youtube"></use>
+        </svg>
+        <svg class="twitter" width="21" height="18">
+          <use id="twitter" href="assets/shared/desktop/twitter.svg#twitter"></use>
+        </svg>
+        <svg class="pinterest" width="20" height="20">
+          <use id="pinterest" href="assets/shared/desktop/pinterest.svg#pinterest"></use>
+        </svg>
+        <svg class="instagram" width="21" height="20">
+          <use id="instagram" href="assets/shared/desktop/instagram.svg#instagram"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="footer__menu">
+      <ul>
+        <li class="footer__menuItem"><a class="footer--active" href="index.html">Home</a></li>
+        <li class="footer__menuItem"><a class="footer--active" href="stories.html">Stories</a></li>
+        <li class="footer__menuItem"><a class="footer--active" href="features.html">Features</a></li>
+        <li class="footer__menuItem"><a class="footer--active" href="pricing.html">Pricing</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__cta">
+      <a href="#" class="inviteBtn-2 darkBtn">Get an invite <span></span></a>
+      <p class="copyright">Copyright 2019. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
