@@ -18,9 +18,9 @@ This is a solution to the [Photosnap Website challenge on Frontend Mentor](https
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Github repository: https://github.com/nhhlan/photosnap
-- Live Site URL: https://nhhlan.github.io/photosnap/
+- [Solution URL](https://www.frontendmentor.io/solutions/mobile-first-using-sass-and-bem-QuqRNbvbE)
+- [Github repository](https://github.com/nhhlan/photosnap)
+- [Live Site URL](https://nhhlan.github.io/photosnap/)
 
 ## My process
 
