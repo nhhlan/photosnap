@@ -6,31 +6,21 @@ This is a solution to the [Photosnap Website challenge on Frontend Mentor](https
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements throughout the site
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Github repository: https://github.com/nhhlan/photosnap
+- Live Site URL: https://nhhlan.github.io/photosnap/
 
 ## My process
 
@@ -45,33 +35,31 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I have a chance to redo some basic responsive components with the help of Sass and BEM such as:
+- Navigation bar
+- Item Card 
+- Switch toggle
+- Pricing card
+- Table
+- Footer
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
+I did learn a lot of tips, tricks and techniques for: 
+- Reset defaults
+- SVG icon
+- Responsive image using <picture>
+- Using ::before and ::after for almost everything 
+- Working with table
+- Min(), max(), clamp()
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
+There is a lot of things that I don't even know existed. 
+For the next project, I would focus more on SVG because I struggled so much. It took me about 3 days just to get to SVG icon display as I wanted. Other than that, reading documents and do more research is a must :D
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Responsive table](https://codepen.io/AllThingsSmitty/pen/MyqmdM) - This sure helped me get through the table section.
+- [Styling SVG](https://tympanus.net/codrops/2015/07/16/styling-svg-use-content-css/) - Colorize the SVG icon using variables
+
 
 
