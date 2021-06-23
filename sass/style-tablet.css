@@ -2,7 +2,7 @@
     Navbar
 -----------*/
 header {
-  width: 85vw;
+  width: 100vw;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,7 +10,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 7.5vw;
 }
 
 header .container {

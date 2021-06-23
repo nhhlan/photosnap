@@ -183,8 +183,12 @@ header > *, section > *, footer > * {
     Navbar
 -----------*/
 header {
-  position: relative;
-  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #FFFFFF;
 }
 
 header .container, header .home__text, header .stories__text, header .features, header .pricing__table-1, header .pricing__table-2, header .pricing__table-3, header .compare {
